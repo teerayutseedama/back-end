@@ -1,0 +1,20 @@
+-- CreateTable
+CREATE TABLE "Transfer" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "from" TEXT NOT NULL,
+    "to" TEXT NOT NULL,
+    "amount" INTEGER NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL
+);
+
+-- CreateTable
+CREATE TABLE "TransferItem" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "qty" INTEGER NOT NULL,
+    "itemName" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL,
+    "transferId" INTEGER NOT NULL,
+    CONSTRAINT "TransferItem_transferId_fkey" FOREIGN KEY ("transferId") REFERENCES "Transfer" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
