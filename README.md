@@ -149,7 +149,7 @@ pnpm run lint
 
 | Variable      | Description                     | Default                                  |
 |---------------|---------------------------------|------------------------------------------|
-| PORT          | Application port                | 3000                                     |
+| PORT          | Application port                | 3001                                     |
 | DATABASE_URL  | Database connection string      | file:./dev.db                            |
 | JWT_SECRET    | Secret for JWT tokens           | super-secret                             |
 | NODE_ENV      | Environment (dev/prod)          | development                              |
